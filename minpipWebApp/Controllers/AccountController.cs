@@ -11,7 +11,7 @@ namespace minpipWebApp.Controllers
 {
     public class AccountController : Controller
     {
-        minpipWebApp.Models.db_a7d46_realtech01Entities db = new Models.db_a7d46_realtech01Entities();
+        //declare instance of my connection here. 
         // GET: Account
         public ActionResult Index()
         {
@@ -120,10 +120,10 @@ namespace minpipWebApp.Controllers
                             mail.Body = Body;
                             mail.IsBodyHtml = true;
                             SmtpClient smtp = new SmtpClient();
-                            smtp.Host = "mail.minpip.com";
-                            smtp.Port = 8889;
+                            smtp.Host = "host";
+                            smtp.Port = //port here;
                             smtp.UseDefaultCredentials = false;
-                            smtp.Credentials = new System.Net.NetworkCredential("noreply@minpip.com", "Realtech01"); // Enter seders User name and password  
+                            smtp.Credentials = new System.Net.NetworkCredential("username", "password"); // Enter senders Username and password  
                             smtp.EnableSsl = false;
                             smtp.Send(mail);
                             msg = "Verification Link has been sent to your email";
